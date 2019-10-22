@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorFullDetailsActivity_BookingStep_4">
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:onClick="backHome"
+        android:layout_margin="@dimen/padding_10dp"
+        android:background="@drawable/ic_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/iv_btn_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/icon_left_arrow"
+        android:layout_margin="@dimen/padding_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cardiology_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_white_bg"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_docImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/general_physican"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_docName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Dr."
+                android:textSize="@dimen/text_size_primaryline"
+                app:layout_constraintStart_toEndOf="@+id/iv_docImage"
+                app:layout_constraintTop_toTopOf="@+id/iv_docImage" />
+
+            <TextView
+                android:id="@+id/tv_docQualification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="ql"
+                android:textSize="@dimen/text_size_primaryline"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_docImage"
+                app:layout_constraintStart_toEndOf="@+id/iv_docImage"
+                app:layout_constraintTop_toBottomOf="@+id/tv_docName" />
+
+            <com.squareup.timessquare.CalendarPickerView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_weight="9"
+                android:background="#FFFFFF"
+                android:clipToPadding="false"
+                android:scrollbarStyle="outsideOverlay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_docImage" />
+
+
+            <!--<TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:fontFamily="@font/poppins"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Please choose a date and time slot after clicking on highlighted date."
+                android:textAlignment="center"
+                android:textColor="@color/darkText"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/calendar_view"
+                app:layout_constraintStart_toStartOf="@+id/calendar_view"
+                app:layout_constraintTop_toBottomOf="@+id/tvEndTime" />-->
+
+
+            <TextView
+                android:id="@+id/textViewNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:drawableEnd="@drawable/icon_next_page"
+                android:drawablePadding="@dimen/padding_5dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:text="Next"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+
+
+            <TextView
+                android:id="@+id/tv_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_curve_corner"
+                android:fontFamily="@font/poppins"
+                android:padding="5dp"
+                android:text="Sunday"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_primaryline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+
+            <TextView
+                android:id="@+id/tv_time_slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_curve_corner"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/text_size_primaryline"
+                android:padding="5dp"
+                android:text="HH:MM-HH:MM"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/tv_days"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+
+
+            <!--       <TextView
+                       android:id="@+id/tv_set_time"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="8dp"
+                       android:layout_marginBottom="8dp"
+                       android:gravity="center"
+                       android:drawableLeft="@drawable/icon_clock"
+                       android:hint="11:30"
+                       android:fontFamily="@font/archivo_black"
+                       android:drawablePadding="@dimen/padding_5dp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView4" />
+       -->
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_height_40"
+                android:layout_marginStart="0dp"
+                android:gravity="center"
+                android:textColor="@color/dark_blue"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="8dp"
+                android:text="Time Slots"
+                app:layout_constraintStart_toStartOf="@+id/calendar_view"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_view" />
+       -->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

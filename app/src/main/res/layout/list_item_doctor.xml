@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="@dimen/padding_10dp"
+    android:background="@drawable/shape_white_bg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/card_image"
+        android:elevation="@dimen/padding_10dp"
+        app:cardCornerRadius="@dimen/size_height_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_doc_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_doctor"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_doc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="2dp"
+        android:text="Doctor Name"
+        android:textColor="@color/darkText"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/iv_doc_fees"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/card_image"
+        app:layout_constraintTop_toTopOf="@+id/card_image" />
+
+    <ImageView
+        android:id="@+id/iv_doc_fees"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_icon_rupee"
+        app:layout_constraintEnd_toStartOf="@+id/tv_fees_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fees_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="200"
+        android:textSize="12sp"
+        android:textColor="@color/color6"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_doc_fees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_doc_fees" />
+
+    <TextView
+        android:id="@+id/tv_qualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins"
+        android:padding="2dp"
+        android:textSize="12sp"
+        android:text="MD, MPhil"
+        android:textColor="@color/lightText"
+        app:layout_constraintStart_toEndOf="@+id/card_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doc_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

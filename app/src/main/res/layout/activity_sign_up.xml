@@ -1,0 +1,239 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen1"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_btn_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="backToMain"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/icon_left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center|start"
+            android:text="Signup user"
+            android:textColor="@color/darkText"
+            android:textSize="16sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_10dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sign_up" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Create new account"
+                android:textColor="@color/darkText"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="80dp">
+
+                <EditText
+                    android:id="@+id/signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_user_name"
+                    android:drawablePadding="@dimen/padding_10dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="User"
+                    android:textColor="@color/darkText"
+                    android:textSize="@dimen/text_size_primaryline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_4dp">
+
+                <EditText
+                    android:id="@+id/signup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/padding_10dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/darkText"
+                    android:textSize="@dimen/text_size_primaryline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signup_contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_contact_white"
+                    android:drawablePadding="@dimen/padding_10dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Contact no."
+                    android:inputType="number"
+                    android:textColor="@color/darkText"
+                    android:textSize="@dimen/text_size_primaryline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/signup_dob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:drawableStart="@drawable/ic_event"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="Date of birth (DD/MM/YY)"
+                android:inputType="number"
+                android:onClick="setDob"
+                android:paddingStart="@dimen/padding_5dp"
+                android:textColor="@color/darkText"
+                android:textSize="@dimen/text_size_primaryline" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:drawableStart="@drawable/icon_gender"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_5dp"
+                    android:text="Gender"
+                    android:textColor="@color/darkText"
+                    android:textSize="@dimen/text_size_primaryline" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <RadioButton
+                        android:id="@+id/signup_radioMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:checked="false"
+                        android:fontFamily="@font/poppins"
+                        android:text="  Male"
+                        android:textColor="@color/darkText"
+                        android:textSize="@dimen/text_size_primaryline" />
+
+                    <RadioButton
+                        android:id="@+id/signup_radioFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:checked="false"
+                        android:fontFamily="@font/poppins"
+                        android:text="   Female"
+                        android:textColor="@color/darkText"
+                        android:textSize="@dimen/text_size_primaryline" />
+                </RadioGroup>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="@dimen/padding_10dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Email"
+                    android:textColor="@color/darkText"
+                    android:textSize="@dimen/text_size_primaryline" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:background="@android:color/holo_blue_dark"
+            android:fontFamily="@font/poppins"
+            android:text="Create now"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

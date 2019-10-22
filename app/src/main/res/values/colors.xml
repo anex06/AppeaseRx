@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#52C0CE</color>
+    <color name="colorPrimaryDark">#fafafa</color>
+    <color name="colorAccent">#444343</color>
+    <color name="color_grey">#eeeeee</color>
+    <color name="color_white">#ffffff</color>
+    <color name="nav_text">#878787</color>
+    <color name="light_green">#06b2b6</color>
+    <color name="color_text_primary">#666666</color>
+
+
+    <color name="color1">#7D6608</color>
+    <color name="color2">#979A9A</color>
+    <color name="color3">#008080</color>
+    <color name="color4">#52C0CE</color>
+    <color name="color5">#003319</color>
+    <color name="color6">#663300</color>
+    <color name="color7">#CC6600</color>
+    <color name="color8">#2E3D2F</color>
+    <color name="color9">#121612</color>
+    <color name="color10">#38422D</color>
+    <color name="color11">#263F57</color>
+    <color name="color12">#414455</color>
+    <color name="white">#ffffff</color>
+    <color name="silver">#DEE4E4</color>
+    <color name="lightText">#636969</color>
+    <color name="darkText">#444343</color>
+   <!-- <color name="ripple">#04247C</color>-->
+    <color name="dark_blue">#04247C</color>
+    <color name="dash_board_menu">#1ED829</color>
+    <color name="color_green">#1ED829</color>
+</resources>
